@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;1,400&family=Barlow:wght@100;200;300;400;500;600;700&family=Bellefair&display=swap');
+
+body {
+    background-image: url(../media/Bitmap.png);
+    background-size: 100%;
+    background-color: black;
+}
+
+.topnav {
+    width: 95%;
+    height: 80px;
+    float: right;
+    display: table;
+}
+
+.logo {
+    vertical-align: middle;
+    display: table-cell;
+}
+.Q {
+    font-family: Bellefair;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    color: #FFFFFF;
+}
+.bozofline {
+    vertical-align: middle;
+    display: table-cell;
+}
+.line {
+    float: right;
+    width: 520px;
+    height: 2px;
+    background-color: #979797;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+}
+
+.navigation {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81.5485px);
+    width: 830px;
+
+    display: table-cell;
+    vertical-align: middle;
+}
+.navnav {
+    text-align: center;
+}
+.navnav a {
+    font-family: Barlow Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 0px;
+    display: inline-block;
+    text-align: center;
+
+}
+.navnav .animation {
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    z-index: 0;
+    background: white;
+    transition: all .5s ease 0s;
+}
+.navnav a:hover {
+    color: #848484;
+}
+.navnav a:nth-child(1) {
+    width: 200px;
+}
+.navnav .start-home,.navnav a:nth-child(1):hover~.animation {
+    width: 120px;
+    left: 50px;
+}
+
+.navnav a:nth-child(2) {
+    width: 200px;
+}
+.navnav .start-planets,.navnav a:nth-child(2):hover~.animation {
+    width: 150px;
+    left: 240px;
+}
+.navnav a:nth-child(3) {
+    width: 200px;
+}
+.navnav .start-stars,.navnav a:nth-child(3):hover~.animation {
+    width: 150px;
+    left: 440px;
+}
+.navnav a:nth-child(4) {
+    width: 200px;
+}.navnav .start-asteroids,.navnav a:nth-child(4):hover~.animation {
+    width: 150px;
+    left: 650px;
+}
+
+
+main{
+    padding-top: 80px;
+    margin-bottom: 100px;
+}
+
+.main-cont{
+    margin: 0 auto;
+    width: 1100px;
+    color: white;
+    align-items: center;
+    margin-top: 100px;
+}
+
+
+.vert-line{
+    position: absolute;
+    width: 40px;
+    height: 0px;
+    border: 1px solid #FFFFFF;
+    transform: rotate(90deg);
+
+}
+
+.planet-info{
+    margin-bottom: -20px;
+    margin-left: 40px;
+    font-family: Barlow Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+    /* identical to box height */
+    
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+    
+}
+.main-main{
+    padding-top: 80px;
+    display: flex;
+    margin-left: 0px;
+    padding-left: 100px;
+}
+
+
+.main-division{
+    display: inline-block !important;
+    margin-left: 167px;
+}
+.menumenu {
+    width: 500px;
+}
+.main-menu{
+    display:flex;
+    width: 500px;
+    height: 20px;
+    background-color: transparent;
+    opacity: 100%;
+    text-align: center;
+}
+
+.main-menu a{
+    text-decoration: none;
+    color: white;
+    margin-right: 30px;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 2.7px;
+    font-family:'Barlow Condensed'; 
+    color: #D0D6F9;
+
+}
+
+.main-menu a:hover {
+    color: #848484;
+}
+
+
+
+.main-name{
+    font-family: "Bellefair";
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 64px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.main-par{
+    font-family: "Barlow";
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    width: 444px;
+    height: 237px;
+    color: #FFFFFF;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.second-line{
+    margin-top: 50px;
+    width: 444px;
+    height: 1px;
+    background: #383B4B;
+}

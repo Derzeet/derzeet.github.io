@@ -1,0 +1,55 @@
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;1,400&family=Barlow:wght@100;200;300;400;500;600;700&family=Bellefair&display=swap');
+    .modal-header button h3 {
+        color: #848484;
+        size: 40px;
+        float: right;
+    }
+    
+    .modal-header button h3:hover {
+        color: black;
+    }
+    
+    .col p {
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    .container h3 {
+        margin-top: 7px;
+    }
+    /* TABS */
+    
+    .nav-item a {
+        font-family: Barlow Condensed;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+        color: black;
+    }
+    
+    .main-name {
+        font-family: "Bellefair";
+        font-weight: normal;
+        font-size: 56px;
+        line-height: 64px;
+        text-transform: uppercase;
+        color: #000000;
+        margin: 0;
+        margin-top: 20px;
+    }
+    
+    .text {
+        font-family: "Barlow";
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        width: 444px;
+        height: 237px;
+        margin: 0;
+        margin-bottom: 25px;
+    }
