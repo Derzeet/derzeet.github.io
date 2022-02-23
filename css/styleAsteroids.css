@@ -55,10 +55,17 @@ body {
     opacity: .25;
 }
 
+.navbar-nav {
+    position: relative;
+}
+
 .underline {
-    width: 100px;
-    height: 2px;
-    background-color: #fff;
+    position: absolute;
+    width: 125px;
+    height: 3px;
+    background-color: white;
+    bottom: -22px;
+    left: 70%;
 }
 
 .main-division {
@@ -120,6 +127,20 @@ body {
     line-height: 19px;
     letter-spacing: 2.7px;
     color: rgba(255, 255, 255, 0.473);
+}
+
+.nav-item a :active {
+    color: white;
+}
+
+.nav-item a:hover,
+.nav-item a.active {
+    color: rgb(255, 255, 255);
+}
+
+.nav-item a:hover {
+    color: rgb(209, 209, 209);
+    text-decoration: none;
 }
 
 .main-par {

@@ -4,12 +4,12 @@ body {
     background-color: black;
 }
 
-#mainpic {
-    background-image: url(../media/starsabout.png);
-    background-repeat: no-repeat;
-    background-color: black;
-    position: relative;
-    height: 367px;
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 8;
+    height: 81px;
 }
 
 .logo {
@@ -18,19 +18,45 @@ body {
 }
 
 .head-cont {
-    width: 1100px;
+    width: 70%;
     margin: 0 auto;
+    position: relative;
 }
 
 @media (max-width:1200px) {
     .head-cont {
-        width: 700px;
+        width: 100%;
     }
+}
+
+.nav-item a {
+    font-family: Barlow Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    color: rgb(255, 255, 255);
+}
+
+.nav-item a :active {
+    color: white;
+}
+
+.nav-item a:hover,
+.nav-item a.active {
+    color: rgb(255, 255, 255);
+}
+
+.nav-item a:hover {
+    color: rgb(209, 209, 209);
+    text-decoration: none;
 }
 
 .navbar {
     background: rgba(0, 0, 0, 0.04) !important;
     backdrop-filter: blur(81.5485px) !important;
+    height: 81px;
 }
 
 .wprd {
@@ -38,8 +64,13 @@ body {
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 2.7px;
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
     margin-right: 90px;
+}
+
+.wprd:hover {
+    color: #cacaca !important;
+    transition: 0.25s;
 }
 
 .navbar-brand {
@@ -68,14 +99,30 @@ body {
     }
 }
 
+.navbar-nav {
+    position: relative;
+}
+
 .underline {
-    width: 96px;
-    height: 2px;
-    background-color: #fff;
+    position: absolute;
+    width: 85px;
+    height: 3px;
+    background-color: white;
+    bottom: -22px;
+    left: 47%;
 }
 
 
 /*nfksdjfbkdf*/
+
+#mainpic {
+    background-image: url(../media/starsabout.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    height: 358px;
+    top: -81px;
+}
 
 .some {
     width: 100%;
@@ -100,25 +147,25 @@ body {
     color: #FFFFFF;
 }
 
-.vert-line {
-    height: 94px;
-    border: 1px solid #FFFFFF;
-    width: 0px;
-}
-
-#preview {
+#previewbtn {
     background-image: url(../media/starsgallerypreview.png);
     width: 100%;
     height: 369px;
     transition: 0.2s;
     margin-top: 90px;
+    position: relative;
 }
 
-#tabbb {
-    margin-top: 50px;
+.gallerydec {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 71.15%, #9A9A9A 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-#preview:hover {
+#previewbtn:hover {
     opacity: 0.5;
 }
 
@@ -127,21 +174,37 @@ body {
     bottom: 0;
 }
 
-#preview p {
+#previewbtn p {
     font-family: Barlow;
     font-style: normal;
     font-weight: 600;
-    font-size: 48px;
     line-height: 58px;
     color: #FFFFFF;
 }
 
-#pills-tabContent {
-    width: 100%;
-}
-
 
 /*GALLERY*/
+
+.modaljs {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.modal-header {
+    position: relative;
+}
 
 .modal-header button i {
     color: #000000;
@@ -180,10 +243,11 @@ body {
 
 .col-lg-4 img {
     transition: 0.2s;
+    filter: grayscale(1) brightness(0.5);
 }
 
 .col-lg-4 img:hover {
-    opacity: 0.8;
+    filter: grayscale(0) brightness(1);
 }
 
 .container h3 {
@@ -204,7 +268,7 @@ body {
 .container-md {
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
-    margin-top: 2%;
+    width: 70%;
 }
 
 .container-md hr {
@@ -214,36 +278,69 @@ body {
 
 /*TABS*/
 
-.nav-item a {
+.tablinks {
+    overflow: hidden;
+    margin-top: 36px;
+}
+
+.tabCon {
+    display: none;
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.item {
     font-family: Barlow Condensed;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 2.7px;
-    color: rgba(255, 255, 255, 0.473);
+    color: rgba(255, 255, 255, 0.438);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.nav-item a :active {
-    color: white;
-}
-
-.nav-item a:hover,
-.nav-item a.active {
+.tablinks li.active {
     color: rgb(255, 255, 255);
 }
 
-.nav-item a:hover {
-    color: white;
-    text-decoration: none;
+.tablinks li:hover {
+    color: rgb(255, 255, 255);
+    transition: all 0.3s;
 }
 
-.tab {
+.item {
     margin-right: 20px;
 }
 
-.tab-content {
-    margin-top: 20px;
+.linesunder {
+    margin-top: 130px;
+    height: 10px;
+}
+
+.luline {
+    cursor: pointer;
+    height: 2px;
+    width: 20px;
+    margin-top: 0;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.438);
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.luline :hover {
+    background-color: rgb(255, 255, 255);
 }
 
 .main-name {
@@ -253,18 +350,173 @@ body {
     line-height: 64px;
     text-transform: uppercase;
     color: #ffffff;
-    margin: 0;
     margin-top: 20px;
 }
 
 .text {
     font-family: "Barlow";
     font-weight: normal;
-    font-size: 18px;
     line-height: 22px;
-    width: 100%;
     height: 237px;
     margin: 0;
     margin-bottom: 25px;
     color: white;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+}
+
+.breadcrumb .breadcrumb-item {
+    vertical-align: top
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: rgb(63, 63, 63);
+    position: relative;
+    cursor: pointer;
+}
+
+.breadcrumb li a:hover {
+    color: rgb(212, 168, 85);
+}
+
+.breadcrumb li {
+    cursor: default;
+}
+
+@media only screen and (max-width: 1920px) {
+    body {}
+    .page-footer {
+        margin-top: 200px;
+    }
+    .container-md {
+        margin-top: 2%;
+    }
+    #galleryContainer {
+        margin-top: 2%;
+    }
+    #previewbtn p {
+        font-size: 48px;
+    }
+    .text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:1200px) {
+    .linesunder {
+        margin-top: 200px;
+    }
+    .container-md {
+        margin-top: 0;
+        width: 100%;
+    }
+    #galleryContainer {
+        margin-top: 0;
+    }
+    #nameof {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .underline {
+        display: none;
+    }
+    .nav-item a {
+        font-size: 24px;
+        margin-top: 30px;
+        margin-left: 70px;
+        margin-bottom: 30px;
+    }
+    .col-xl-6 p {
+        font-size: 20px;
+    }
+    .tablinks {
+        text-align: center;
+    }
+    .tablinks li {
+        font-size: 20px
+    }
+    .linesunder {
+        margin-top: 300px;
+    }
+    .page-footer {
+        text-align: center;
+    }
+    .container-md {
+        width: 100%;
+    }
+    #galleryContainer {
+        width: 100%;
+    }
+    .container>h3 {
+        text-align: center;
+    }
+    .col-lg-4 img {
+        filter: grayscale(0) brightness(1);
+    }
+    .col-lg p {
+        width: 90%;
+        margin-left: 10px;
+        font-size: 25px;
+        line-height: 29px;
+    }
+    .text {
+        font-size: 25px;
+        line-height: 29px;
+    }
+    .page-footer {
+        margin-top: 900px;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+    .col-lg p {
+        font-size: 24px;
+    }
+    #previewbtn p {
+        font-size: 36px;
+    }
+    .text {
+        font-size: 28px;
+    }
+}
+
+.divider {
+    border-top: 1px solid white;
+}
+
+h6 {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.col-lg-4>p,
+.col-lg-4>a {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #535353;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.col-lg-4>a:hover {
+    color: #b8b8b8;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    margin-top: 20px;
 }

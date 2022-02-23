@@ -21,6 +21,7 @@ body {
 .head-cont {
     width: 70%;
     margin: 0 auto;
+    position: relative;
 }
 
 @media (max-width:1200px) {
@@ -39,8 +40,13 @@ body {
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 2.7px;
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
     margin-right: 90px;
+}
+
+.wprd:hover {
+    color: #cacaca !important;
+    transition: 0.25s;
 }
 
 .navbar-brand {
@@ -69,10 +75,17 @@ body {
     }
 }
 
+.navbar-nav {
+    position: relative;
+}
+
 .underline {
-    width: 60px;
-    height: 2px;
-    background-color: #fff;
+    position: absolute;
+    width: 96px;
+    height: 3px;
+    background-color: white;
+    bottom: -22px;
+    left: 47%;
 }
 
 
@@ -352,7 +365,7 @@ body {
         line-height: 29px;
     }
     .page-footer {
-        margin-top: 700px;
+        margin-top: 900px;
     }
 }
 

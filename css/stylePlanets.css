@@ -56,20 +56,17 @@ body {
     }
 }
 
-.underline {
-    width: 86px;
-    height: 2px;
-    background-color: #fff;
+.navbar-nav {
+    position: relative;
 }
 
-.nav-item a {
-    font-family: Barlow Condensed;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 2.7px;
-    color: rgba(255, 255, 255, 0.473);
+.underline {
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    background-color: white;
+    bottom: -22px;
+    left: 22%;
 }
 
 
